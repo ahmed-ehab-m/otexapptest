@@ -7,6 +7,8 @@ class CategoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('category list view height');
+    print(MediaQuery.of(context).size.height * 0.11);
     List<String> offersList = [
       'منتجات تجميل',
       'موبايلات',
@@ -15,7 +17,7 @@ class CategoryListView extends StatelessWidget {
     ].reversed.toList();
     List<String> imagesList = Assets.categoryImages;
     return SizedBox(
-      height: 90,
+      height: MediaQuery.of(context).size.height * 0.11,
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: ListView.separated(

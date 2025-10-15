@@ -10,6 +10,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
+        scrolledUnderElevation: 0,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
@@ -21,7 +23,10 @@ class HomeView extends StatelessWidget {
                   color: Colors.grey,
                   onPressed: () {},
                 ),
-                Text('الكل', style: AppTextStyles.bold16),
+                Text(
+                  'الكل',
+                  style: AppTextStyles.bold16.copyWith(color: Colors.grey),
+                ),
               ],
             ),
             Text('استكشف العروض', style: AppTextStyles.medium16),
