@@ -22,13 +22,7 @@ class _MainViewState extends State<MainView> {
     "محادثة",
     "الرئيسية",
   ];
-  List<String> icons = [
-    Assets.accountCircleIcon,
-    Assets.datasetIcon,
-    Assets.addBoxIcon,
-    Assets.chatIcon,
-    Assets.homeIcon,
-  ];
+  List<String> icons = Assets.bottomNavigationBarIcons;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

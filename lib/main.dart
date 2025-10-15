@@ -17,6 +17,7 @@ class OtexTestApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Tajawal',
         scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
       ),
     );
   }

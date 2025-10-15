@@ -1,7 +1,16 @@
 class Assets {
-  static const String homeIcon = "assets/images/bungalow.svg";
-  static const String chatIcon = "assets/images/chat.svg";
-  static const String addBoxIcon = "assets/images/add_box.svg";
-  static const String datasetIcon = "assets/images/dataset.svg";
-  static const String accountCircleIcon = "assets/images/account_circle.svg";
+  static const List<String> bottomNavigationBarIcons = [
+    "assets/images/account_circle.svg",
+    "assets/images/dataset.svg",
+    "assets/images/add_box.svg",
+    "assets/images/chat.svg",
+    "assets/images/bungalow.svg",
+  ];
+  ////////////////////////////////////////////////
+  static const List<String> categoryImages = [
+    "assets/images/PhotoContainer.png",
+    "assets/images/PhotoContainer(1).png",
+    "assets/images/PhotoContainer(2).png",
+    "assets/images/PhotoContainer(3).png",
+  ];
 }
