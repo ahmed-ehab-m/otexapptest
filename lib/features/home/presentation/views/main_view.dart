@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:otexapptest/core/utils/app_colors.dart';
 
 import 'package:otexapptest/core/utils/assets.dart';
-import 'package:otexapptest/core/utils/functions/get_reponsive_width.dart';
+import 'package:otexapptest/core/helper_functions/get_reponsive_width.dart';
 import 'package:otexapptest/features/home/presentation/views/widgets/custom_bottom_navigation_bar_item.dart';
+import 'package:otexapptest/features/home/presentation/views/widgets/main_view_body.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -30,6 +32,7 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: MainViewBody(currentIndex: currentIndex),
       bottomNavigationBar: IntrinsicHeight(
         child: SafeArea(
           child: Container(
@@ -42,7 +45,7 @@ class _MainViewState extends State<MainView> {
               0,
             ),
             decoration: BoxDecoration(
-              // color: Colors.red,
+              // color: Colors.white,
               border: BoxBorder.fromLTRB(
                 top: BorderSide(color: Colors.grey.shade300),
               ),
@@ -67,7 +70,7 @@ class _MainViewState extends State<MainView> {
                         ? true
                         : false,
                     iconColor: index == 2
-                        ? Color(0xff0062E2)
+                        ? AppColors.primaryColor
                         : currentIndex == index
                         ? Colors.black
                         : Colors.grey,

@@ -13,7 +13,11 @@ class OtexTestApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Tajawal', primarySwatch: Colors.blue),
+
+      theme: ThemeData(
+        fontFamily: 'Tajawal',
+        scaffoldBackgroundColor: Colors.white,
+      ),
     );
   }
 }

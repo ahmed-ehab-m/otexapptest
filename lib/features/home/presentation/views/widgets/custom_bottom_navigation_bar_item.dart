@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:otexapptest/core/utils/functions/get_reponsive_width.dart';
+import 'package:otexapptest/core/helper_functions/get_reponsive_width.dart';
 
 class CutomBottomNavigationBarItem extends StatefulWidget {
   const CutomBottomNavigationBarItem({
