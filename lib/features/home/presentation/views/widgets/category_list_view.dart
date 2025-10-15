@@ -21,6 +21,7 @@ class CategoryListView extends StatelessWidget {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: ListView.separated(
+          shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemCount: offersList.length,
           separatorBuilder: (context, index) => const SizedBox(width: 10),

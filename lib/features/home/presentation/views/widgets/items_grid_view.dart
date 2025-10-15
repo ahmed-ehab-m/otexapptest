@@ -14,8 +14,8 @@ class ItemsGridView extends StatelessWidget {
           crossAxisCount: 2,
         ),
 
-        //  shrinkWrap: true,
-        // physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         mainAxisSpacing: 12,
         crossAxisSpacing: 12,
         itemBuilder: (context, index) {

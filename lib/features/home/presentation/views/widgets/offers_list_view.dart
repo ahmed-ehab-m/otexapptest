@@ -19,6 +19,8 @@ class _OffersListViewState extends State<OffersListView> {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: ListView.separated(
+          // physics: const NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemCount: offersList.length,
           separatorBuilder: (context, index) => const SizedBox(width: 10),
