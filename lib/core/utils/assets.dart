@@ -22,4 +22,10 @@ class Assets {
   static const String talaatMostafaIcon = "assets/images/talaatMostafa.png";
   static const String shoppingCartIcon = "assets/images/add_shopping_cart.svg";
   static const String companyBadgeIcon = "assets/images/Company Badge.svg";
+  //////////////////////Plans Icons////////////////////////////
+  static const String chevronRightIcon = "assets/images/chevron_right.svg";
+
+  static const String checkBoxIcon =
+      "assets/images/check_box_outline_blank.svg";
+  static const String acuteIcon = "assets/images/acute.svg";
 }

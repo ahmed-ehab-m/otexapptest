@@ -22,6 +22,12 @@ class AppTextStyles {
   static const TextStyle medium14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w500,
+    // color: Colors.black,
+  );
+  static TextStyle regular14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: Color(0xff090F1F).withOpacity(0.5),
   );
   static const TextStyle medium12 = TextStyle(
     fontSize: 12,

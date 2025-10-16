@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:otexapptest/core/utils/app_router.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
 
 class HomeViewAppBar extends StatelessWidget {
@@ -15,7 +17,9 @@ class HomeViewAppBar extends StatelessWidget {
             IconButton(
               icon: const Icon(CupertinoIcons.arrow_left),
               color: Colors.black.withOpacity(0.5),
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kPlansView);
+              },
             ),
             Text(
               'الكل',
