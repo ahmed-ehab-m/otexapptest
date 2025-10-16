@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
+import 'package:otexapptest/core/utils/assets.dart';
 
 class GridViewItem extends StatelessWidget {
   const GridViewItem({super.key});
@@ -22,7 +23,7 @@ class GridViewItem extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    SvgPicture.asset('assets/images/Vector.svg'),
+                    SvgPicture.asset(Assets.saleIcon),
                     Expanded(
                       child: Text(
                         'جاكيت من الصوف مناسب',
@@ -37,7 +38,7 @@ class GridViewItem extends StatelessWidget {
 
                 Row(
                   children: [
-                    SvgPicture.asset('assets/images/favorite.svg'),
+                    SvgPicture.asset(Assets.favoriteIcon),
 
                     Expanded(
                       child: RichText(
@@ -70,27 +71,28 @@ class GridViewItem extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    SvgPicture.asset('assets/images/local_fire_department.svg'),
-                    SizedBox(width: 4),
                     Text(
                       'تم بيع 3.3k+',
                       style: AppTextStyles.regular10,
                       textDirection: TextDirection.rtl,
                     ),
+                    SizedBox(width: 4),
+
+                    SvgPicture.asset(Assets.localfireDepartmentIcon),
                   ],
                 ),
                 SizedBox(height: 27),
                 Row(
                   children: [
                     Image.asset(
-                      'assets/images/talaatMostafa.png',
+                      Assets.talaatMostafaIcon,
                       height: 24,
                       width: 24,
                     ),
                     SizedBox(width: 12),
-                    SvgPicture.asset('assets/images/add_shopping_cart.svg'),
+                    SvgPicture.asset(Assets.shoppingCartIcon),
                     Spacer(),
-                    SvgPicture.asset('assets/images/Company Badge.svg'),
+                    SvgPicture.asset(Assets.companyBadgeIcon),
                   ],
                 ),
               ],

@@ -30,7 +30,7 @@ class _MainViewState extends State<MainView> {
       bottomNavigationBar: IntrinsicHeight(
         child: SafeArea(
           child: Container(
-            margin: EdgeInsets.only(top: 10),
+            margin: EdgeInsets.only(top: 10, bottom: 12),
             // alignment: Alignment.bottomCenter,
             padding: EdgeInsets.fromLTRB(
               getResponsiveWidth(context, 11.5),

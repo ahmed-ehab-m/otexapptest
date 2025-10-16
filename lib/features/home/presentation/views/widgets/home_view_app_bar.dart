@@ -14,12 +14,14 @@ class HomeViewAppBar extends StatelessWidget {
           children: [
             IconButton(
               icon: const Icon(CupertinoIcons.arrow_left),
-              color: Colors.grey,
+              color: Colors.black.withOpacity(0.5),
               onPressed: () {},
             ),
             Text(
               'الكل',
-              style: AppTextStyles.bold16.copyWith(color: Colors.grey),
+              style: AppTextStyles.bold16.copyWith(
+                color: Colors.black.withOpacity(0.5),
+              ),
             ),
           ],
         ),
