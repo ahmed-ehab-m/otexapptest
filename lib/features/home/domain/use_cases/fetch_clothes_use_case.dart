@@ -8,5 +8,6 @@ class FetchClothesUseCase {
 
   FetchClothesUseCase({required this.homeRepo});
 
-  Future<Either<Failure, ClothesEntity>> call() => homeRepo.fetchClothes();
+  Future<Either<Failure, List<ClothesEntity>>> call() =>
+      homeRepo.fetchClothes();
 }

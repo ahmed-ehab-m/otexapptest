@@ -1,3 +1,5 @@
+import 'package:otexapptest/features/home/domain/entities/clothes_entity.dart';
+
 class ClothesModel {
   final int id;
   final String name;
@@ -31,4 +33,10 @@ class ClothesModel {
       numberOfSales: json['numberOfSales'],
     );
   }
+  ClothesEntity toEntity() => ClothesEntity(
+    name: name,
+    image: image,
+    price: price,
+    numberOfSales: numberOfSales,
+  );
 }

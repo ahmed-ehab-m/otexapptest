@@ -1,10 +1,16 @@
-import 'package:otexapptest/features/home/domain/entities/clothes_entity.dart';
+import 'package:otexapptest/core/local_data_source/local_data_base.dart';
+import 'package:otexapptest/features/home/data/models/clothes_model.dart';
 
 abstract class HomeLocalDataSource {
-  List<ClothesEntity> fetchClothes();
+  Future<List<ClothesModel>> fetchClothes();
 }
 
 class HomeLocalDataSourceImpl implements HomeLocalDataSource {
+  // HomeLocalDataSourceImpl();
   @override
-  List<ClothesEntity> fetchClothes() {}
+  Future<List<ClothesModel>> fetchClothes() async {
+    final db = await LocalDataSource.instance;
+    final List<Map<String, dynamic>> maps = await db.query('CLOTHES');
+    return maps.map((e) => ClothesModel.fromJson(e)).toList();
+  }
 }
