@@ -27,6 +27,8 @@ class Assets {
 
   static const String checkBoxIcon =
       "assets/images/check_box_outline_blank.svg";
+  static const String checkBoxFilledIcon = "assets/images/check_box.svg";
+
   static const String acuteIcon = "assets/images/acute (1).svg";
   static const String rocketIcon = "assets/images/rocket (2).svg";
   static const String keepIcon = "assets/images/keep (1).svg";

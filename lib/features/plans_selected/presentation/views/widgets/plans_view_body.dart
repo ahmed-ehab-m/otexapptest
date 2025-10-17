@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:otexapptest/core/utils/constants.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/custom_button.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/extra_plan_item.dart';
-import 'package:otexapptest/features/plans_selected/presentation/views/widgets/plan_item.dart';
+import 'package:otexapptest/features/plans_selected/presentation/views/widgets/basic_plan_item.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/plans_view_app_bar.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/plus_plan_item.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/special_plan_widget.dart';
@@ -32,7 +32,6 @@ class PlansViewBody extends StatelessWidget {
             SpecialPlanWidget(),
             const SizedBox(height: 24),
             Divider(color: Colors.black.withOpacity(0.1)),
-
             CustomButton(),
             const SizedBox(height: 12),
           ],
