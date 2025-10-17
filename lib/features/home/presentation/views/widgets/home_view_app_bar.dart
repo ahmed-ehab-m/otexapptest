@@ -18,7 +18,7 @@ class HomeViewAppBar extends StatelessWidget {
               icon: const Icon(CupertinoIcons.arrow_left),
               color: Colors.black.withOpacity(0.5),
               onPressed: () {
-                GoRouter.of(context).push(AppRouter.kPlansView);
+                GoRouter.of(context).push(AppRouter.kFilteringView);
               },
             ),
             Text(

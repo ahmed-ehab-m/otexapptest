@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:otexapptest/core/utils/constants.dart';
-import 'package:otexapptest/features/plans_selected/presentation/views/widgets/custom_button.dart';
+import 'package:otexapptest/core/widgets/custom_button.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/extra_plan_item.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/basic_plan_item.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/plans_view_app_bar.dart';
@@ -32,7 +32,7 @@ class PlansViewBody extends StatelessWidget {
             SpecialPlanWidget(),
             const SizedBox(height: 24),
             Divider(color: Colors.black.withOpacity(0.1)),
-            CustomButton(),
+            CustomButton(title: 'التالى', leadingIcon: true),
             const SizedBox(height: 12),
           ],
         ),
