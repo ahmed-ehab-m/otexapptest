@@ -27,5 +27,16 @@ class Assets {
 
   static const String checkBoxIcon =
       "assets/images/check_box_outline_blank.svg";
-  static const String acuteIcon = "assets/images/acute.svg";
+  static const String acuteIcon = "assets/images/acute (1).svg";
+  static const String rocketIcon = "assets/images/rocket (2).svg";
+  static const String keepIcon = "assets/images/keep (1).svg";
+  static const String globeIcon = "assets/images/globe.svg";
+  static const String workSpacePremiumIcon =
+      "assets/images/workspace_premium.svg";
+
+  static const String numberOfViews7Icon = "assets/images/Number Of Views.svg";
+  static const String numberOfViews18Icon =
+      "assets/images/Number Of Views (2).svg";
+  static const String numberOfViews24Icon =
+      "assets/images/Number Of Views (4).svg";
 }

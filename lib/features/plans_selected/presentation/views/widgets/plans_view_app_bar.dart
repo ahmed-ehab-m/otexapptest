@@ -19,7 +19,10 @@ class PlansViewAppBar extends StatelessWidget {
               spacing: 12,
               children: [
                 Text('أختر الباقات اللى تناسبك', style: AppTextStyles.medium24),
-                SvgPicture.asset(Assets.chevronRightIcon),
+                InkWell(
+                  onTap: () => Navigator.pop(context),
+                  child: SvgPicture.asset(Assets.chevronRightIcon),
+                ),
               ],
             ),
           ],

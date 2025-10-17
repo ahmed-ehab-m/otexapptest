@@ -5,6 +5,7 @@ import 'package:otexapptest/core/utils/app_colors.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
 import 'package:otexapptest/core/utils/assets.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/widgets/custom_plan_container.dart';
+import 'package:otexapptest/features/plans_selected/presentation/views/widgets/custom_plan_option.dart';
 
 class BasicPlanItem extends StatelessWidget {
   const BasicPlanItem({super.key});
@@ -12,7 +13,7 @@ class BasicPlanItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPlanContainer(
-      childWidget: Column(
+      child: Column(
         spacing: 12,
         children: [
           Row(
@@ -37,28 +38,14 @@ class BasicPlanItem extends StatelessWidget {
                   ),
                   SizedBox(width: 7),
                   SvgPicture.asset(Assets.checkBoxIcon),
-                  // Icon(
-                  //   // CupertinoIcons.square,
-                  //   CupertinoIcons.checkmark_square_fill,
-                  //   color: AppColors.primaryLightColor,
-                  //   size: 20,
-                  // ),
                 ],
               ),
             ],
           ),
           Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                "صلاحية الأعلان 30 يوم",
-                textDirection: TextDirection.rtl,
-                style: AppTextStyles.medium14,
-              ),
-              SizedBox(width: 7),
-              SvgPicture.asset(Assets.acuteIcon),
-            ],
+          CustomPlanOption(
+            title: 'صلاحية الاعلان 30 يوم',
+            icon: Assets.acuteIcon,
           ),
         ],
       ),

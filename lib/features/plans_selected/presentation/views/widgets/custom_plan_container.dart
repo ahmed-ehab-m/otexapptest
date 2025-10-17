@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' show Colors;
 
 class CustomPlanContainer extends StatelessWidget {
-  const CustomPlanContainer({super.key, required this.childWidget});
-  final Widget childWidget;
+  const CustomPlanContainer({super.key, required this.child});
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +22,7 @@ class CustomPlanContainer extends StatelessWidget {
         color: Colors.white,
         // color: Colors.black.withOpacity(0.1),
       ),
-      child: childWidget,
+      child: child,
     );
   }
 }

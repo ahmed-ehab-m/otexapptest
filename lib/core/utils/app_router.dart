@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:otexapptest/features/home/presentation/views/main_view.dart';
-import 'package:otexapptest/features/plans_selected/presentation/plans_view.dart';
+import 'package:otexapptest/features/plans_selected/presentation/views/plans_view.dart';
 
 class AppRouter {
   static const String kMainView = '/';
