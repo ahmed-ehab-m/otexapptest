@@ -19,7 +19,12 @@ class FilteringViewAppBar extends StatelessWidget {
         Spacer(),
         Text('فلترة', style: AppTextStyles.medium24),
         SizedBox(width: 12),
-        InkWell(onTap: () {}, child: Icon(Icons.clear, size: 20)),
+        InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.clear, size: 20),
+        ),
       ],
     );
   }
