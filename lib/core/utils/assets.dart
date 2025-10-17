@@ -22,4 +22,23 @@ class Assets {
   static const String talaatMostafaIcon = "assets/images/talaatMostafa.png";
   static const String shoppingCartIcon = "assets/images/add_shopping_cart.svg";
   static const String companyBadgeIcon = "assets/images/Company Badge.svg";
+  //////////////////////Plans Icons////////////////////////////
+  static const String chevronRightIcon = "assets/images/chevron_right.svg";
+
+  static const String checkBoxIcon =
+      "assets/images/check_box_outline_blank.svg";
+  static const String checkBoxFilledIcon = "assets/images/check_box.svg";
+
+  static const String acuteIcon = "assets/images/acute (1).svg";
+  static const String rocketIcon = "assets/images/rocket (2).svg";
+  static const String keepIcon = "assets/images/keep (1).svg";
+  static const String globeIcon = "assets/images/globe.svg";
+  static const String workSpacePremiumIcon =
+      "assets/images/workspace_premium.svg";
+
+  static const String numberOfViews7Icon = "assets/images/Number Of Views.svg";
+  static const String numberOfViews18Icon =
+      "assets/images/Number Of Views (2).svg";
+  static const String numberOfViews24Icon =
+      "assets/images/Number Of Views (4).svg";
 }
