@@ -5,8 +5,13 @@ import 'package:otexapptest/core/utils/app_colors.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+  const CustomButton({
+    super.key,
+    required this.title,
+    this.leadingIcon = false,
+  });
+  final String title;
+  final bool leadingIcon;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -17,10 +22,11 @@ class CustomButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(CupertinoIcons.arrow_left, color: Colors.white),
+          if (leadingIcon)
+            const Icon(CupertinoIcons.arrow_left, color: Colors.white),
           SizedBox(width: 4),
           Text(
-            'التالى',
+            title,
             style: AppTextStyles.bold16.copyWith(color: Colors.white),
           ),
         ],
