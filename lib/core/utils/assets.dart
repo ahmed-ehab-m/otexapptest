@@ -41,4 +41,10 @@ class Assets {
       "assets/images/Number Of Views (2).svg";
   static const String numberOfViews24Icon =
       "assets/images/Number Of Views (4).svg";
+  ///////////Filtering Icons//////////////////////////
+  static const String realStateIcon =
+      'assets/images/material-symbols_real-estate-agent-rounded.svg';
+  static const String locationIcon = 'assets/images/location_on.svg';
+
+  static const String chevronBackIcon = 'assets/images/chevron_backward.svg';
 }
