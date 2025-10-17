@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:otexapptest/core/local_data_source/local_data_base.dart';
 import 'package:otexapptest/core/utils/app_router.dart';
+import 'package:otexapptest/core/utils/static_data.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await LocalDataSource.storeClothes(clothesStaticData);
   runApp(const OtexTestApp());
 }
 

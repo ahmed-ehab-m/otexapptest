@@ -1,3 +1,4 @@
+import 'package:otexapptest/core/utils/constants.dart';
 import 'package:otexapptest/features/home/data/models/clothes_model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
@@ -15,7 +16,7 @@ class LocalDataSource {
       version: 1,
       onCreate: (db, version) async {
         await db.execute('''
-        CREATE TABLE CLOTHES(
+        CREATE TABLE $kClothesTableName(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
         image TEXT,
@@ -29,12 +30,19 @@ class LocalDataSource {
   }
 
   //////Store clothes/////
-  Future<void> storeClothes(ClothesModel clothesModel) async {
+  static Future<void> storeClothes(List<ClothesModel> clothesList) async {
     final db = await instance;
-    await db.insert(
-      'CLOTHES',
-      clothesModel.toJson(),
-      conflictAlgorithm: ConflictAlgorithm.replace,
+    final count = Sqflite.firstIntValue(
+      await db.rawQuery('SELECT COUNT(*) FROM $kClothesTableName'),
     );
+    if (count == 0) {
+      for (var item in clothesList) {
+        await db.insert(
+          'clothes',
+          item.toJson(),
+          conflictAlgorithm: ConflictAlgorithm.replace,
+        );
+      }
+    }
   }
 }
