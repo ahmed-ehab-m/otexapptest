@@ -11,7 +11,7 @@ class FetchProductsCubit extends Cubit<FetchProductsState> {
     : super(FetchProductsInitialState());
   final FetchProductsUseCase fetchClothesUseCase;
 
-  Future<void> fetchClothes() async {
+  Future<void> fetchProducts() async {
     emit(FetchProductsLoadingState());
     final failureOrClothes = await fetchClothesUseCase();
     failureOrClothes.fold(

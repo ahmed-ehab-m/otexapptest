@@ -8,6 +8,8 @@ import 'package:otexapptest/features/home/presentation/cubits/fetch_categories_c
 import 'package:otexapptest/features/home/presentation/cubits/fetch_products_cubit/fetch_products_cubit.dart';
 import 'package:otexapptest/features/home/presentation/views/home_view.dart';
 import 'package:otexapptest/features/home/presentation/views/main_view.dart';
+import 'package:otexapptest/features/plans_selected/domain/use_cases/get_plans_use_case.dart';
+import 'package:otexapptest/features/plans_selected/presentation/cubits/get_plans_cubit/get_plans_cubit.dart';
 import 'package:otexapptest/features/plans_selected/presentation/views/plans_view.dart';
 
 class AppRouter {
@@ -30,7 +32,11 @@ class AppRouter {
             BlocProvider(
               create: (context) =>
                   FetchProductsCubit(getIt<FetchProductsUseCase>())
-                    ..fetchClothes(),
+                    ..fetchProducts(),
+            ),
+            BlocProvider(
+              create: (context) =>
+                  GetPlansCubit(getIt<GetPlansUseCase>())..getPlans(),
             ),
           ],
           child: const MainView(),

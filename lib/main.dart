@@ -10,6 +10,8 @@ void main() async {
 
   await LocalDataSource.storeProducts(productsStaticData);
   await LocalDataSource.storeCategories(categoryStaticData);
+  await LocalDataSource.storePlans(planStaticData);
+
   setupServiceLocator();
   runApp(const OtexTestApp());
 }
