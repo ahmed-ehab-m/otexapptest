@@ -8,10 +8,10 @@ class SpecialPlanWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: Color(0xffF7F7F7),
+        color: const Color(0xffF7F7F7),
         border: Border.all(color: Colors.black.withOpacity(0.1)),
       ),
       child: Row(

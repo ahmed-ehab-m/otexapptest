@@ -27,7 +27,7 @@ class AppTextStyles {
   static TextStyle regular14 = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
-    color: Color(0xff090F1F).withOpacity(0.5),
+    color: const Color(0xff090F1F).withOpacity(0.5),
   );
   static TextStyle medium12 = TextStyle(
     fontSize: 12.sp,

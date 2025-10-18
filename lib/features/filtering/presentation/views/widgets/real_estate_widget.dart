@@ -4,8 +4,8 @@ import 'package:otexapptest/core/utils/app_colors.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
 import 'package:otexapptest/core/utils/assets.dart';
 
-class RealStateWidget extends StatelessWidget {
-  const RealStateWidget({super.key});
+class RealEstateWidget extends StatelessWidget {
+  const RealEstateWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -6,6 +6,6 @@ class PLansView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: PlansViewBody()));
+    return const Scaffold(body: SafeArea(child: PlansViewBody()));
   }
 }

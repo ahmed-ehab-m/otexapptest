@@ -12,13 +12,13 @@ class GridViewItem extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: Color(0xffE2E2E2), width: 1),
+        border: Border.all(color: const Color(0xffE2E2E2), width: 1),
       ),
       child: Column(
         children: [
           Image.asset(clothesEntity.image),
           Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             child: Column(
               children: [
                 Row(
@@ -34,7 +34,7 @@ class GridViewItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 11.5),
+                const SizedBox(height: 11.5),
 
                 Row(
                   children: [
@@ -49,7 +49,7 @@ class GridViewItem extends StatelessWidget {
                             TextSpan(
                               text: ' ${clothesEntity.price}جم/',
                               style: AppTextStyles.medium14.copyWith(
-                                color: Color(0xffFF4144),
+                                color: const Color(0xffFF4144),
                               ),
                             ),
                             TextSpan(
@@ -65,7 +65,7 @@ class GridViewItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -74,12 +74,12 @@ class GridViewItem extends StatelessWidget {
                       style: AppTextStyles.regular10,
                       textDirection: TextDirection.rtl,
                     ),
-                    SizedBox(width: 4),
+                    const SizedBox(width: 4),
 
                     SvgPicture.asset(Assets.localfireDepartmentIcon),
                   ],
                 ),
-                SizedBox(height: 27),
+                const SizedBox(height: 27),
                 Row(
                   children: [
                     Image.asset(
@@ -87,9 +87,9 @@ class GridViewItem extends StatelessWidget {
                       height: 24,
                       width: 24,
                     ),
-                    SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     SvgPicture.asset(Assets.shoppingCartIcon),
-                    Spacer(),
+                    const Spacer(),
                     SvgPicture.asset(Assets.companyBadgeIcon),
                   ],
                 ),

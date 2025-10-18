@@ -30,7 +30,7 @@ class _SelectableOptionWidgetState extends State<SelectableOptionWidget> {
             color: Colors.black.withOpacity(0.5),
           ),
         ),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         Directionality(
           textDirection: TextDirection.rtl,
           child: Wrap(

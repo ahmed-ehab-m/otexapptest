@@ -12,8 +12,8 @@ class PlanRepoImpl extends PlanRepo {
   @override
   Future<Either<Failure, List<PlanEntity>>> getPlans() async {
     try {
-      List<PlanModel> planModels = await planLocalDataSource.getPlans();
-      List<PlanEntity> planEntities = planModels
+      final List<PlanModel> planModels = await planLocalDataSource.getPlans();
+      final List<PlanEntity> planEntities = planModels
           .map((e) => e.toEntity())
           .toList();
       return Right(planEntities);

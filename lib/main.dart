@@ -15,10 +15,10 @@ void main() async {
 
   setupServiceLocator();
   runApp(
-    ScreenUtilInit(
+    const ScreenUtilInit(
       minTextAdapt: true,
       designSize: Size(360, 980),
-      child: const OtexTestApp(),
+      child: OtexTestApp(),
     ),
   );
 }
@@ -35,7 +35,7 @@ class OtexTestApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Tajawal',
         scaffoldBackgroundColor: Colors.white,
-        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
       ),
     );
   }

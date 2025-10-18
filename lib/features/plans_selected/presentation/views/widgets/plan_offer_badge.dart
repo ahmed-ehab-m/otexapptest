@@ -10,8 +10,8 @@ class PlanOfferBadge extends StatelessWidget {
     return ClipPath(
       clipper: LeftDiagonalClipper(),
       child: Container(
-        padding: EdgeInsets.fromLTRB(25, 9, 4, 9),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.fromLTRB(25, 8, 4, 8),
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(4),
             // bottomLeft: Radius.elliptical(5, 5),

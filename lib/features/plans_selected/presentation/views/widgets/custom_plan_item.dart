@@ -25,7 +25,7 @@ class CustomPlanItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   if (plan.image != null) SvgPicture.asset(plan.image!),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     spacing: 8,

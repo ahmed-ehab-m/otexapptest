@@ -38,7 +38,7 @@ class CustomPlanOption extends StatelessWidget {
                   ),
           ],
         ),
-        SizedBox(width: 7),
+        const SizedBox(width: 7),
         SvgPicture.asset(icon),
       ],
     );

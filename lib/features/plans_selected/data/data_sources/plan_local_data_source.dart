@@ -12,7 +12,9 @@ class PlanLocalDataSourceImpl implements PlanLocalDataSource {
     final db = await LocalDataSource.instance;
     // get all plans
     final List<Map<String, dynamic>> planMaps = await db.query(kPlansTableName);
-    List<PlanModel> plans = planMaps.map((e) => PlanModel.fromJson(e)).toList();
+    final List<PlanModel> plans = planMaps
+        .map((e) => PlanModel.fromJson(e))
+        .toList();
     // List<PlanEntity> planEntities = plans.map((e) => e.toEntity()).toList();
     return plans;
 

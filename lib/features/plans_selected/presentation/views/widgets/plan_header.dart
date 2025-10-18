@@ -44,7 +44,7 @@ class _PlanHeaderState extends State<PlanHeader> {
                         : Colors.black,
                   ),
                 ),
-                SizedBox(width: 7),
+                const SizedBox(width: 7),
                 InkWell(
                   onTap: () {
                     setState(() {
@@ -61,7 +61,7 @@ class _PlanHeaderState extends State<PlanHeader> {
             ),
           ],
         ),
-        Divider(),
+        const Divider(),
       ],
     );
   }

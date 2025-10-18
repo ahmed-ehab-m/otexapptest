@@ -20,19 +20,19 @@ class ItemsGridView extends StatelessWidget {
           clothesList = state.clothes;
         }
         if (state is FetchProductsLoadingState) {
-          LoadingWidget();
+          const LoadingWidget();
         }
         if (state is FetchProductsFailureState) {
           ErrorWidget(state.message);
         }
         return Expanded(
           child: MasonryGridView.builder(
-            gridDelegate: SliverSimpleGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
             ),
 
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             mainAxisSpacing: 12.h,
             crossAxisSpacing: 12.w,
             itemBuilder: (context, index) {
