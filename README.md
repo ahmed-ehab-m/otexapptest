@@ -1,26 +1,24 @@
-
+# Otex App
 ## Table of contents
-
-
-- ### [🧩 Main Tools & Technologies Used =>](#main-packages-used)
+- ### [Main Tools and Technologies Used =>](#main-tools-and-technologies-used)
 - ### [main packages used =>](#main-packages-used)
 - ### [Folder structure =>](#folder-structure)
 - ### [Screenshots =>](#screenshots)
 
 
-## Main Tools & Technologies Used
-🧱## Architecture & State Management
-### Clean Architecture + MVVM (Feature-Based)
+## Main Tools and Technologies Used
+## Architecture : ### Clean Architecture + MVVM (Feature-Based) 
 The project follows a clean, scalable structure separating concerns into Domain, Data, and Presentation layers for better testability and maintainability.
 
 ### Domain: contains business logic and entities.
-
 ### Data: handles repositories, models, and local data sources.
-
 ### Presentation: contains UI and Cubit classes for state management.
 
-### Cubit (from flutter_bloc)
+## StateManagement : ### Cubit (from flutter_bloc)
 Used for handling app state in a simple yet structured way. Each feature has its own Cubit managing its UI logic and data flow.
+
+## BackEnd : SQLFite
+Used for store static data in strucuture way.
 
 ## Main packages used
 
