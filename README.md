@@ -9,18 +9,17 @@
 
 
 ## Main Tools & Technologies Used
-🧱 Architecture & State Management
-
-Clean Architecture + MVVM (Feature-Based)
+🧱## Architecture & State Management
+### Clean Architecture + MVVM (Feature-Based)
 The project follows a clean, scalable structure separating concerns into Domain, Data, and Presentation layers for better testability and maintainability.
 
-Domain: contains business logic and entities.
+### Domain: contains business logic and entities.
 
-Data: handles repositories, models, and local data sources.
+### Data: handles repositories, models, and local data sources.
 
-Presentation: contains UI and Cubit classes for state management.
+### Presentation: contains UI and Cubit classes for state management.
 
-Cubit (from flutter_bloc)
+### Cubit (from flutter_bloc)
 Used for handling app state in a simple yet structured way. Each feature has its own Cubit managing its UI logic and data flow.
 
 ## Main packages used
