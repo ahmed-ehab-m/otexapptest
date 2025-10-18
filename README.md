@@ -110,7 +110,9 @@ presentation
 
 ## Screenshots
 Here are some screeshots for the application:
-![Uploading home.png…]()
+<img width="1440" height="3040" alt="home" src="https://github.com/user-attachments/assets/3942b889-db7f-419f-bc45-aa569bb6d37e" />
+<img width="1440" height="3040" alt="filter1" src="https://github.com/user-attachments/assets/7793d45a-ed34-4d78-a5d1-62a751ce93a0" />
+<img width="1440" height="3040" alt="filter2" src="https://github.com/user-attachments/assets/7e593833-c9cd-4c60-8145-8dc81fd08829" />
 <img width="1440" height="3040" alt="plans1" src="https://github.com/user-attachments/assets/efda0e12-2c4d-45d2-9868-848ff6c10880" /># otexapptest
 <img width="1440" height="3040" alt="plans2" src="https://github.com/user-attachments/assets/853beb7d-9583-4065-9b9e-a05b2ebbbc97" />
 
