@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:otexapptest/core/utils/app_router.dart';
 
-void main() {
+import 'package:otexapptest/core/helper_functions/setup_service_locator.dart';
+import 'package:otexapptest/core/local_data_source/local_data_base.dart';
+import 'package:otexapptest/core/utils/app_router.dart';
+import 'package:otexapptest/core/utils/static_data.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await LocalDataSource.storeProducts(productsStaticData);
+  await LocalDataSource.storeCategories(categoryStaticData);
+  setupServiceLocator();
   runApp(const OtexTestApp());
 }
 
