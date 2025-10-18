@@ -4,8 +4,4 @@ class PlanOptionEntity {
   final String? subtitle;
 
   PlanOptionEntity({this.subtitle, required this.title, required this.icon});
-
-  Map<String, dynamic> toJson() {
-    return {'title': title, 'icon': icon, 'subtitle': subtitle};
-  }
 }

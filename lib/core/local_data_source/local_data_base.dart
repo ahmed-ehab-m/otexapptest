@@ -49,19 +49,11 @@ class LocalDataSource {
         image TEXT,
         price TEXT,
         badge TEXT,
+        planOption TEXT
         
       )
     ''');
-        await db.execute('''
-  CREATE TABLE $kPlanOptionsTableName (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    plan_id INTEGER,
-    title TEXT,
-    icon TEXT,
-    subtitle TEXT,
-    FOREIGN KEY (plan_id) REFERENCES $kPlansTableName (id) ON DELETE CASCADE
-  )
-''');
+
         ///////////////////////////////
 
         await db.execute('PRAGMA foreign_keys = ON');
@@ -121,18 +113,8 @@ class LocalDataSource {
           'price': plan.price,
           'image': plan.image,
           'badge': plan.badge,
-
-          // 'planOption': jsonEncode(
-          //   plan.planOption.map((e) => e.toJson()).toList(),
-          // ),
+          'planOption': jsonEncode(plan.planOption),
         }, conflictAlgorithm: ConflictAlgorithm.replace);
-      }
-      for (var plan in plansList) {
-        await db.insert(
-          kPlanOptionsTableName,
-          plan.toJson(),
-          conflictAlgorithm: ConflictAlgorithm.replace,
-        );
       }
     }
   }

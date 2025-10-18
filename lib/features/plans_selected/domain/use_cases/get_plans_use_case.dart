@@ -8,5 +8,6 @@ class GetPlansUseCase {
 
   GetPlansUseCase({required this.planRepo});
 
-  Future<Either<Failure, List<PlanEntity>>> call() => planRepo.getPlans();
+  Future<Either<Failure, List<PlanEntity>>> call() async =>
+      await planRepo.getPlans();
 }

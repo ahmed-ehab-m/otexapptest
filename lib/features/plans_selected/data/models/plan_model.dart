@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:otexapptest/features/plans_selected/data/models/plan_option_model.dart';
@@ -8,18 +9,12 @@ class PlanModel extends PlanEntity {
 
   PlanModel({
     required this.id,
-    required String title,
-    required String price,
-    String? badge,
-    String? image,
-    required List<PlanOptionModel> planOption,
-  }) : super(
-         badge: badge,
-         image: image,
-         title: title,
-         price: price,
-         planOption: planOption,
-       );
+    required super.title,
+    required super.price,
+    super.badge,
+    super.image,
+    required List<PlanOptionModel> super.planOption,
+  });
 
   factory PlanModel.fromJson(Map<String, dynamic> json) => PlanModel(
     id: json['id'],
@@ -27,9 +22,13 @@ class PlanModel extends PlanEntity {
     image: json['image'] ?? '',
     title: json['title'],
     price: json['price'],
-    planOption: (json['planOption'] as List<dynamic>)
-        .map((e) => PlanOptionModel.fromJson(e))
-        .toList(),
+    planOption: json['planOption'] is String
+        ? (jsonDecode(json['planOption']) as List<dynamic>)
+              .map((e) => PlanOptionModel.fromJson(e))
+              .toList()
+        : (json['planOption'] as List<dynamic>)
+              .map((e) => PlanOptionModel.fromJson(e))
+              .toList(),
   );
 
   Map<String, dynamic> toJson() {
@@ -45,4 +44,12 @@ class PlanModel extends PlanEntity {
       }).toList(),
     };
   }
+
+  PlanEntity toEntity() => PlanEntity(
+    badge: badge,
+    image: image,
+    title: title,
+    price: price,
+    planOption: planOption,
+  );
 }

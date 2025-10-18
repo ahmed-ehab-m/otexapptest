@@ -107,7 +107,7 @@ final List<PlanModel> planStaticData = [
     ],
   ),
   PlanModel(
-    id: 3,
+    id: 4,
     title: 'سوبر',
     price: '3000',
     badge: 'اعلى مشاهدات',
