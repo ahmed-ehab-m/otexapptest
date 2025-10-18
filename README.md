@@ -7,18 +7,27 @@
 
 
 ## Main Tools and Technologies Used
-## Architecture : ### Clean Architecture + MVVM (Feature-Based) 
-The project follows a clean, scalable structure separating concerns into Domain, Data, and Presentation layers for better testability and maintainability.
+### Framework & Language
+#### Flutter: Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. We use Flutter to create a smooth and responsive user interface.
+#### Dart: The programming language behind Flutter. Dart is fast, optimized for UI, and provides features like null safety and strong typing for building reliable apps.
 
-### Domain: contains business logic and entities.
-### Data: handles repositories, models, and local data sources.
-### Presentation: contains UI and Cubit classes for state management.
+### Architecture 
+#### Clean Architecture: A software design pattern that separates the code into layers (Presentation, Domain, Data). This makes the app easier to test, maintain, and scale. Each layer has its own responsibility and doesn't depend heavily on other layers.
+Domain: contains business logic and entities.
 
-## StateManagement : ### Cubit (from flutter_bloc)
+Data: handles repositories, models, and local data sources.
+
+Presentation: contains UI and Cubit classes for state management.
+
+### State Management 
+#### Cubit: A simplified version of BLoC pattern used to manage the app's state. Cubit helps us control how data flows in the app and updates the UI when the data changes. It makes the code more organized and predictable.
+
+
+### StateManagement :  Cubit (from flutter_bloc)
 Used for handling app state in a simple yet structured way. Each feature has its own Cubit managing its UI logic and data flow.
 
-## BackEnd : SQLFite
-Used for store static data in strucuture way.
+### Backend/Database
+#### SQLite (sqflite): A local database that stores data directly on the device. We use SQLite to cache weather data, enable offline mode, and provide fast access to stored information without needing an internet connection.
 
 ## Main packages used
 
@@ -50,6 +59,7 @@ ai_weather
 ├── build
 ├── ios
 ├── lib
+├── screen_shots
 └── test
 ```
 Here is the folder structure we have been using in this project:
@@ -65,11 +75,29 @@ Here is the folder structure we have been using in this project:
 This folder contains all services and tools related to the application
 ```
 ├── core
-│   ├── data
+│   ├── local_data_source
+│   │     ├──local_data_base.dart
 │   ├── errors
+│   │     ├──failure.dart
 │   ├── helper_functions
+│   │     ├──get_responsive_width.dart
+│   │     ├──setup_service_locator.dart
 │   ├── utils
-│   ├── widgets              
+│   │     ├──app_colors.dart
+│   │     ├──app_router.dart
+│   │     ├──app_text_styles.dart
+│   │     ├──assets.dart
+│   │     ├──constants.dart
+│   │     ├──static_data.dart
+│   ├── widgets
+│   │     ├──custom_button.dart
+│   │     ├──error_widget.dart
+│   │     ├──loading_widget.dart
+│   │     ├──left_diagonal_clipper.dart
+
+
+
+              
 ```
 ### features
 This folder containes everything related to the screen of the application and the business logic of the application specificly state management.
