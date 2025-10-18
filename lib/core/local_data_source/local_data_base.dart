@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:otexapptest/core/utils/constants.dart';
 import 'package:otexapptest/features/home/data/models/category_model.dart';
 import 'package:otexapptest/features/home/data/models/product_model.dart';
+import 'package:otexapptest/features/plans_selected/data/models/plan_model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -16,6 +19,8 @@ class LocalDataSource {
       path,
       version: 1,
       onCreate: (db, version) async {
+        ////////////////Products Table///////////////
+
         await db.execute('''
         CREATE TABLE $kProductsTableName(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,8 +30,10 @@ class LocalDataSource {
         numberOfSales REAL,
         categoryID INTEGER,
         FOREIGN KEY(categoryID) REFERENCES $kCategoriesTableName(id)
-        )
+      )
 ''');
+        //////////////Categories Table/////////////////
+
         await db.execute('''
     CREATE TABLE $kCategoriesTableName(
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -34,13 +41,36 @@ class LocalDataSource {
       image TEXT
     )
   ''');
+        //////////Plans Table///////////////
+        await db.execute('''
+      CREATE TABLE $kPlansTableName(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        image TEXT,
+        price TEXT,
+        badge TEXT,
+        
+      )
+    ''');
+        await db.execute('''
+  CREATE TABLE $kPlanOptionsTableName (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    plan_id INTEGER,
+    title TEXT,
+    icon TEXT,
+    subtitle TEXT,
+    FOREIGN KEY (plan_id) REFERENCES $kPlansTableName (id) ON DELETE CASCADE
+  )
+''');
+        ///////////////////////////////
+
         await db.execute('PRAGMA foreign_keys = ON');
       },
     );
     return db!;
   }
 
-  //////Store clothes/////
+  //////Store products/////
   static Future<void> storeProducts(List<ProductModel> productsList) async {
     final db = await instance;
     final count = Sqflite.firstIntValue(
@@ -71,6 +101,36 @@ class LocalDataSource {
         await db.insert(
           kCategoriesTableName,
           item.toJson(),
+          conflictAlgorithm: ConflictAlgorithm.replace,
+        );
+      }
+    }
+  }
+
+  ///////////Store plans//////
+  static Future<void> storePlans(List<PlanModel> plansList) async {
+    final db = await instance;
+    final count = Sqflite.firstIntValue(
+      await db.rawQuery('SELECT COUNT(*) FROM $kPlansTableName'),
+    );
+    if (count == 0) {
+      for (var plan in plansList) {
+        await db.insert(kPlansTableName, {
+          'id': plan.id,
+          'title': plan.title,
+          'price': plan.price,
+          'image': plan.image,
+          'badge': plan.badge,
+
+          // 'planOption': jsonEncode(
+          //   plan.planOption.map((e) => e.toJson()).toList(),
+          // ),
+        }, conflictAlgorithm: ConflictAlgorithm.replace);
+      }
+      for (var plan in plansList) {
+        await db.insert(
+          kPlanOptionsTableName,
+          plan.toJson(),
           conflictAlgorithm: ConflictAlgorithm.replace,
         );
       }

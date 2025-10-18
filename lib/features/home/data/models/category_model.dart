@@ -1,11 +1,8 @@
 import 'package:otexapptest/features/home/domain/entities/category_entity.dart';
 
-class CategoryModel {
+class CategoryModel extends CategoryEntity {
   final int id;
-  final String name;
-  final String image;
 
-  CategoryModel({required this.id, required this.name, required this.image});
   Map<String, dynamic> toJson() {
     return {'id': id, 'name': name, 'image': image};
   }
@@ -17,5 +14,7 @@ class CategoryModel {
       image: json['image'],
     );
   }
+
+  CategoryModel({required super.name, required super.image, required this.id});
   CategoryEntity toEntity() => CategoryEntity(name: name, image: image);
 }
