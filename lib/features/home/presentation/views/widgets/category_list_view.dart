@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' show CircularProgressIndicator;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:otexapptest/core/utils/assets.dart';
 import 'package:otexapptest/features/home/domain/entities/category_entity.dart';
 import 'package:otexapptest/features/home/presentation/cubits/fetch_categories_cubit/fetch_categories_cubit_cubit.dart';
 import 'package:otexapptest/features/home/presentation/views/widgets/category_list_view_item.dart';
@@ -22,7 +21,6 @@ class CategoryListView extends StatelessWidget {
         }
         if (state is FetchCategoriesSuccessState) {
           categories = state.categories;
-          print('categories.length = ${categories.length}');
         }
         return SizedBox(
           height: MediaQuery.of(context).size.height * 0.11,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:otexapptest/core/utils/constants.dart';
 import 'package:otexapptest/features/home/presentation/views/widgets/category_list_view.dart';
 import 'package:otexapptest/features/home/presentation/views/widgets/free_shipping_widget.dart';
@@ -22,13 +23,13 @@ class HomeViewBody extends StatelessWidget {
             child: Column(
               children: [
                 HomeViewAppBar(),
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 OffersListView(),
-                const SizedBox(height: 33),
+                SizedBox(height: 33.h),
                 CategoryListView(),
-                const SizedBox(height: 21),
+                SizedBox(height: 21.h),
                 FreeShippingWidget(),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
               ],
             ),
           ),
@@ -39,19 +40,5 @@ class HomeViewBody extends StatelessWidget {
         ),
       ],
     );
-    // return Container(
-    //   padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-    //   child: Column(
-    //     children: [
-    //       OffersListView(),
-    //       const SizedBox(height: 33),
-    //       CategoryListView(),
-    //       const SizedBox(height: 21),
-    //       FreeShippingWidget(),
-    //       const SizedBox(height: 20),
-    //       ItemsGridView(),
-    //     ],
-    //   ),
-    // );
   }
 }

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
 import 'package:otexapptest/features/filtering/presentation/views/widgets/custom_option_item.dart';
@@ -43,8 +42,6 @@ class _SelectableOptionWidgetState extends State<SelectableOptionWidget> {
                   onTap: () {
                     setState(() {
                       currentIndex = i;
-                      print('i = $i');
-                      print('currentIndex = $currentIndex');
                     });
                   },
                   child: CustomOptionItem(

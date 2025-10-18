@@ -1,6 +1,5 @@
 part of 'fetch_categories_cubit_cubit.dart';
 
-@immutable
 sealed class FetchCategoriesState {}
 
 final class FetchCategoriesInitial extends FetchCategoriesState {}

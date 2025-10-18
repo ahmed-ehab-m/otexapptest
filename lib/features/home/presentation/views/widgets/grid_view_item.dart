@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
@@ -40,10 +39,10 @@ class GridViewItem extends StatelessWidget {
                 Row(
                   children: [
                     SvgPicture.asset(Assets.favoriteIcon),
-
                     Expanded(
                       child: RichText(
                         overflow: TextOverflow.ellipsis,
+
                         textDirection: TextDirection.rtl,
                         text: TextSpan(
                           children: <TextSpan>[
@@ -55,7 +54,6 @@ class GridViewItem extends StatelessWidget {
                             ),
                             TextSpan(
                               text: '60,000,000',
-
                               style: AppTextStyles.regular12.copyWith(
                                 color: Colors.grey,
                                 decoration: TextDecoration.lineThrough,
@@ -68,7 +66,6 @@ class GridViewItem extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 8),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [

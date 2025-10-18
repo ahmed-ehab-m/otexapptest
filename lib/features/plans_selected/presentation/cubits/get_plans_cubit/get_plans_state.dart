@@ -1,6 +1,5 @@
 part of 'get_plans_cubit.dart';
 
-@immutable
 sealed class GetPlansState {}
 
 final class GetPlansInitialState extends GetPlansState {}

@@ -1,8 +1,6 @@
 import 'package:otexapptest/core/local_data_source/local_data_base.dart';
 import 'package:otexapptest/core/utils/constants.dart';
 import 'package:otexapptest/features/plans_selected/data/models/plan_model.dart';
-import 'package:otexapptest/features/plans_selected/data/models/plan_option_model.dart';
-import 'package:otexapptest/features/plans_selected/domain/entities/plan_entity.dart';
 
 abstract class PlanLocalDataSource {
   Future<List<PlanModel>> getPlans();

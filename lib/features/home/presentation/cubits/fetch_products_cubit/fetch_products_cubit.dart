@@ -1,6 +1,4 @@
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
-import 'package:otexapptest/core/errors/failure.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:otexapptest/features/home/domain/entities/product_entity.dart';
 import 'package:otexapptest/features/home/domain/use_cases/fetch_products_use_case.dart';
 

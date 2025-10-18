@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:otexapptest/core/utils/constants.dart';
 import 'package:otexapptest/core/widgets/custom_button.dart';
 import 'package:otexapptest/features/plans_selected/domain/entities/plan_entity.dart';
@@ -32,15 +32,18 @@ class PlansViewBody extends StatelessWidget {
             child: Column(
               children: [
                 PlansViewAppBar(),
-                const SizedBox(height: 20),
-                for (var plan in plans) CustomPlanItem(plan: plan),
-
-                const SizedBox(height: 24),
+                SizedBox(height: 20.h),
+                for (var plan in plans)
+                  Padding(
+                    padding: EdgeInsets.only(top: 24.h),
+                    child: CustomPlanItem(plan: plan),
+                  ),
+                SizedBox(height: 24.h),
                 SpecialPlanWidget(),
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
                 Divider(color: Colors.black.withOpacity(0.1)),
                 CustomButton(title: 'التالى', leadingIcon: true),
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
               ],
             ),
           );

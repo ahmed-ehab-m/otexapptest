@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
 import 'package:otexapptest/core/utils/constants.dart';
 import 'package:otexapptest/features/filtering/presentation/views/widgets/filtering_view_app_bar.dart';
@@ -38,44 +38,44 @@ class FilteringViewBody extends StatelessWidget {
                 color: Colors.black.withOpacity(0.5),
               ),
             ),
-            SizedBox(height: 12),
+            SizedBox(height: 12.h),
             RealStateWidget(),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             Divider(color: Colors.black.withOpacity(0.1)),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             LocationWidget(),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             Divider(color: Colors.black.withOpacity(0.1)),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             LabelDoubleField(title: 'الأقساط الشهرية'),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             SelectableOptionWidget(
               title: 'نوع',
               selectedOptions: realStateTypes,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             SelectableOptionWidget(
               title: 'عدد الغرف',
               selectedOptions: numberOfRooms,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             LabelDoubleField(
               title: 'السعر',
               firstLabel: 'أقل سعر',
               secondLabel: 'اقصى سعر',
             ),
 
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             SelectableOptionWidget(
               title: 'طريقة الدفع',
               selectedOptions: paymentMethods,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             SelectableOptionWidget(
               title: 'حالة العقار',
               selectedOptions: propertyConditions,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 40.h),
             CustomButton(title: 'شاهد 10,000+ نتائج'),
           ],
         ),

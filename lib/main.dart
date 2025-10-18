@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:otexapptest/core/helper_functions/setup_service_locator.dart';
 import 'package:otexapptest/core/local_data_source/local_data_base.dart';
@@ -13,7 +14,13 @@ void main() async {
   await LocalDataSource.storePlans(planStaticData);
 
   setupServiceLocator();
-  runApp(const OtexTestApp());
+  runApp(
+    ScreenUtilInit(
+      minTextAdapt: true,
+      designSize: Size(360, 980),
+      child: const OtexTestApp(),
+    ),
+  );
 }
 
 class OtexTestApp extends StatelessWidget {
