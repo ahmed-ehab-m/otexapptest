@@ -1,10 +1,27 @@
 
 ## Table of contents
 
+
+- ### [🧩 Main Tools & Technologies Used =>](#main-packages-used)
 - ### [main packages used =>](#main-packages-used)
 - ### [Folder structure =>](#folder-structure)
 - ### [Screenshots =>](#screenshots)
 
+
+## Main Tools & Technologies Used
+🧱 Architecture & State Management
+
+Clean Architecture + MVVM (Feature-Based)
+The project follows a clean, scalable structure separating concerns into Domain, Data, and Presentation layers for better testability and maintainability.
+
+Domain: contains business logic and entities.
+
+Data: handles repositories, models, and local data sources.
+
+Presentation: contains UI and Cubit classes for state management.
+
+Cubit (from flutter_bloc)
+Used for handling app state in a simple yet structured way. Each feature has its own Cubit managing its UI logic and data flow.
 
 ## Main packages used
 
@@ -24,7 +41,7 @@
 
 -[sqflite] (https://pub.dev/packages/flutter_screenutil) for Local Database
 
-
+  
 
 ## Folder structure
 We have applied clean archeticture ,MVVM (Feature Based)  concept and here is the basic folder structure:
