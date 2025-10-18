@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
 import 'package:otexapptest/core/utils/assets.dart';
+import 'package:otexapptest/features/home/domain/entities/product_entity.dart';
 
 class GridViewItem extends StatelessWidget {
-  const GridViewItem({super.key});
-
+  const GridViewItem({super.key, required this.clothesEntity});
+  final ProductEntity clothesEntity;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +17,7 @@ class GridViewItem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Image.asset('assets/images/Picture.png'),
+          Image.asset(clothesEntity.image),
           Container(
             padding: EdgeInsets.all(8),
             child: Column(
@@ -26,7 +27,7 @@ class GridViewItem extends StatelessWidget {
                     SvgPicture.asset(Assets.saleIcon),
                     Expanded(
                       child: Text(
-                        'جاكيت من الصوف مناسب',
+                        clothesEntity.name,
                         style: AppTextStyles.bold16,
                         overflow: TextOverflow.ellipsis,
                         textDirection: TextDirection.rtl,
@@ -47,7 +48,7 @@ class GridViewItem extends StatelessWidget {
                         text: TextSpan(
                           children: <TextSpan>[
                             TextSpan(
-                              text: '32,000,000جم/',
+                              text: ' ${clothesEntity.price}جم/',
                               style: AppTextStyles.medium14.copyWith(
                                 color: Color(0xffFF4144),
                               ),
@@ -72,7 +73,7 @@ class GridViewItem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      'تم بيع 3.3k+',
+                      'تم بيع ${clothesEntity.numberOfSales}k+',
                       style: AppTextStyles.regular10,
                       textDirection: TextDirection.rtl,
                     ),

@@ -1,18 +1,20 @@
-import 'package:otexapptest/features/home/domain/entities/clothes_entity.dart';
+import 'package:otexapptest/features/home/domain/entities/product_entity.dart';
 
-class ClothesModel {
+class ProductModel {
   final int id;
   final String name;
   final String image;
-  final double price;
+  final String price;
   final double numberOfSales;
+  final int categoryID;
 
-  ClothesModel({
+  ProductModel({
     required this.id,
     required this.name,
     required this.image,
     required this.price,
     required this.numberOfSales,
+    required this.categoryID,
   });
   Map<String, dynamic> toJson() {
     return {
@@ -21,19 +23,21 @@ class ClothesModel {
       'image': image,
       'price': price,
       'numberOfSales': numberOfSales,
+      'categoryID': categoryID,
     };
   }
 
-  factory ClothesModel.fromJson(Map<String, dynamic> json) {
-    return ClothesModel(
+  factory ProductModel.fromJson(Map<String, dynamic> json) {
+    return ProductModel(
       id: json['id'],
       name: json['name'],
       image: json['image'],
       price: json['price'],
       numberOfSales: json['numberOfSales'],
+      categoryID: json['categoryID'],
     );
   }
-  ClothesEntity toEntity() => ClothesEntity(
+  ProductEntity toEntity() => ProductEntity(
     name: name,
     image: image,
     price: price,

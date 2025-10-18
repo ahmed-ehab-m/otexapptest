@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart' show CircularProgressIndicator;
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:otexapptest/core/utils/assets.dart';
+import 'package:otexapptest/features/home/domain/entities/category_entity.dart';
+import 'package:otexapptest/features/home/presentation/cubits/fetch_categories_cubit/fetch_categories_cubit_cubit.dart';
 import 'package:otexapptest/features/home/presentation/views/widgets/category_list_view_item.dart';
 
 class CategoryListView extends StatelessWidget {
@@ -7,33 +11,35 @@ class CategoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('category list view height');
-    print(MediaQuery.of(context).size.height * 0.11);
-    List<String> offersList = [
-      'منتجات تجميل',
-      'موبايلات',
-      'ساعات',
-      'موضة رجالى',
-    ].reversed.toList();
-    List<String> imagesList = Assets.categoryImages;
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.11,
-      child: Directionality(
-        textDirection: TextDirection.rtl,
-        child: ListView.separated(
-          shrinkWrap: true,
-          scrollDirection: Axis.horizontal,
-          itemCount: offersList.length,
-          separatorBuilder: (context, index) => const SizedBox(width: 10),
-          itemBuilder: (context, index) {
-            return CategoryListViewItem(
-              index: index,
-              offersList: offersList,
-              imageList: imagesList,
-            );
-          },
-        ),
-      ),
+    return BlocBuilder<FetchCategoriesCubit, FetchCategoriesState>(
+      builder: (context, state) {
+        List<CategoryEntity> categories = [];
+        if (state is FetchCategoriesLoadingState) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        if (state is FetchCategoriesFailureState) {
+          return Center(child: Text(state.message));
+        }
+        if (state is FetchCategoriesSuccessState) {
+          categories = state.categories;
+          print('categories.length = ${categories.length}');
+        }
+        return SizedBox(
+          height: MediaQuery.of(context).size.height * 0.11,
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: ListView.separated(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              itemCount: categories.length,
+              separatorBuilder: (context, index) => const SizedBox(width: 10),
+              itemBuilder: (context, index) {
+                return CategoryListViewItem(categoryEntity: categories[index]);
+              },
+            ),
+          ),
+        );
+      },
     );
   }
 }
