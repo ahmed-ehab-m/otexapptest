@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:otexapptest/core/utils/app_colors.dart';
 
@@ -16,14 +15,14 @@ class FilteringViewAppBar extends StatelessWidget {
           'رجوع للأفتراضى',
           style: AppTextStyles.bold16.copyWith(color: AppColors.primaryColor),
         ),
-        Spacer(),
+        const Spacer(),
         Text('فلترة', style: AppTextStyles.medium24),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         InkWell(
           onTap: () {
             Navigator.pop(context);
           },
-          child: Icon(Icons.clear, size: 20),
+          child: const Icon(Icons.clear, size: 20),
         ),
       ],
     );

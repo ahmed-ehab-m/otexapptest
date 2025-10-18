@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:otexapptest/core/utils/app_colors.dart';
 import 'package:otexapptest/core/utils/app_text_styles.dart';
@@ -25,7 +24,7 @@ class CustomOptionItem extends StatelessWidget {
               : Colors.black.withOpacity(0.1),
         ),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 11.5, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 11.5, vertical: 8),
       child: Text(
         type,
         style: AppTextStyles.regular14.copyWith(

@@ -1,5 +1,4 @@
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:otexapptest/features/plans_selected/domain/entities/plan_entity.dart';
 import 'package:otexapptest/features/plans_selected/domain/use_cases/get_plans_use_case.dart';
 

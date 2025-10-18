@@ -24,7 +24,7 @@ class CategoryListViewItem extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.07,
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(categoryEntity.name, style: AppTextStyles.medium14),
         ],
       ),

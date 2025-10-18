@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:otexapptest/core/widgets/loading_widget.dart';
 import 'package:otexapptest/features/home/domain/entities/product_entity.dart';
 import 'package:otexapptest/features/home/presentation/cubits/fetch_products_cubit/fetch_products_cubit.dart';
 import 'package:otexapptest/features/home/presentation/views/widgets/grid_view_item.dart';
@@ -18,21 +20,21 @@ class ItemsGridView extends StatelessWidget {
           clothesList = state.clothes;
         }
         if (state is FetchProductsLoadingState) {
-          return Center(child: CircularProgressIndicator());
+          const LoadingWidget();
         }
         if (state is FetchProductsFailureState) {
-          return Center(child: Text(state.message));
+          ErrorWidget(state.message);
         }
         return Expanded(
           child: MasonryGridView.builder(
-            gridDelegate: SliverSimpleGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
             ),
 
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            mainAxisSpacing: 12,
-            crossAxisSpacing: 12,
+            physics: const NeverScrollableScrollPhysics(),
+            mainAxisSpacing: 12.h,
+            crossAxisSpacing: 12.w,
             itemBuilder: (context, index) {
               return GridViewItem(clothesEntity: clothesList[index]);
             },

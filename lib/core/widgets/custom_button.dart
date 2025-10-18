@@ -24,7 +24,7 @@ class CustomButton extends StatelessWidget {
         children: [
           if (leadingIcon)
             const Icon(CupertinoIcons.arrow_left, color: Colors.white),
-          SizedBox(width: 4),
+          const SizedBox(width: 4),
           Text(
             title,
             style: AppTextStyles.bold16.copyWith(color: Colors.white),

@@ -13,7 +13,7 @@ class HomeRepoImpl extends HomeRepo {
   @override
   Future<Either<Failure, List<ProductEntity>>> fetchProducts() async {
     try {
-      List<ProductModel> clothesModels = await homeLocalDataSource
+      final List<ProductModel> clothesModels = await homeLocalDataSource
           .fetchProducts();
       final List<ProductEntity> clothesEntities = clothesModels
           .map((e) => e.toEntity())

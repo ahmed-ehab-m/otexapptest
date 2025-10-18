@@ -30,19 +30,19 @@ class _MainViewState extends State<MainView> {
       bottomNavigationBar: IntrinsicHeight(
         child: SafeArea(
           child: Container(
-            margin: EdgeInsets.only(top: 10, bottom: 12),
-            // alignment: Alignment.bottomCenter,
+            margin: const EdgeInsets.only(top: 10, bottom: 12),
             padding: EdgeInsets.fromLTRB(
               getResponsiveWidth(context, 11.5),
               12,
               getResponsiveWidth(context, 11.5),
-
               0,
             ),
             decoration: BoxDecoration(
-              // color: Colors.white,
               border: BoxBorder.fromLTRB(
-                top: BorderSide(color: Colors.grey.shade300),
+                top: BorderSide(
+                  color: Colors.black.withOpacity(0.1),
+                  width: 0.4,
+                ),
               ),
             ),
             child: Row(

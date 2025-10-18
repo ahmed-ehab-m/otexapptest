@@ -11,7 +11,7 @@ class FreeShippingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(5),
+      padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: AppColors.secondaryColor.withOpacity(0.05),
         borderRadius: BorderRadius.circular(4),
@@ -27,7 +27,7 @@ class FreeShippingWidget extends StatelessWidget {
               Text(
                 "شحن مجاني",
                 style: AppTextStyles.regular12.copyWith(
-                  color: Color(0xff3A813F),
+                  color: const Color(0xff3A813F),
                 ),
               ),
               SvgPicture.asset(Assets.checkIcon),

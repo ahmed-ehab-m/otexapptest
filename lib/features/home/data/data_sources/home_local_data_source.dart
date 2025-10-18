@@ -2,7 +2,6 @@ import 'package:otexapptest/core/local_data_source/local_data_base.dart';
 import 'package:otexapptest/core/utils/constants.dart';
 import 'package:otexapptest/features/home/data/models/category_model.dart';
 import 'package:otexapptest/features/home/data/models/product_model.dart';
-import 'package:otexapptest/features/home/domain/entities/category_entity.dart';
 
 abstract class HomeLocalDataSource {
   Future<List<ProductModel>> fetchProducts();
@@ -19,6 +18,8 @@ class HomeLocalDataSourceImpl implements HomeLocalDataSource {
   }
 
   //////////////////////////////
+
+  @override
   Future<List<CategoryModel>> fetchCategories() async {
     final db = await LocalDataSource.instance;
     final List<Map<String, dynamic>> maps = await db.query(

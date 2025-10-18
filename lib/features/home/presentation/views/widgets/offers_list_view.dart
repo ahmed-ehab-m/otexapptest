@@ -13,7 +13,6 @@ class _OffersListViewState extends State<OffersListView> {
   @override
   Widget build(BuildContext context) {
     List<String> offersList = ['كل العروض', 'ملابس', 'اكسسوارات', 'الكترونيات'];
-    print(MediaQuery.of(context).size.height * 0.05);
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.05,
       child: Directionality(
